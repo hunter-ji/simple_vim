@@ -1,8 +1,10 @@
 syntax on
 set nu
+filetype plugin indent on
 set encoding=utf-8
 :set tabstop=8 expandtab shiftwidth=4 softtabstop=4
-set pastetoggle=<F8>
+autocmd Syntax go :set tabstop=8 expandtab shiftwidth=8 softtabstop=8
+autocmd Syntax html :set tabstop=8 expandtab shiftwidth=2 softtabstop=2
 
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
@@ -47,8 +49,8 @@ function QuoteDelim(char)
 endf
 
 " 替换esc为jk
-inoremap <esc> <esc>l
-inoremap jk <esc>l
+inoremap <esc> <esc>
+inoremap jk <esc>
 
 " 滚屏
 inoremap <c-h> <left>
